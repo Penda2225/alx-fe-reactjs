@@ -1,7 +1,7 @@
-import { useNavigate } from '../store/recipeStore';
+import { useRecipeStore } from '../store/recipeStore';
 
 const DeleteRecipeButton = ({ id, onDelete }) => {
-  const deleteRecipe = useNavigate((state) => state.deleteRecipe);
+  const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
 
   const handleDelete = () => {
     if (confirm('Are you sure you want to delete this recipe?')) {
