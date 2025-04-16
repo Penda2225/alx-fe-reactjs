@@ -1,3 +1,4 @@
+import { searchGithubUser } from './services/github';
 function App() {
   return (
     <div style={{ padding: '2rem', maxWidth: '600px', margin: 'auto' }}>
