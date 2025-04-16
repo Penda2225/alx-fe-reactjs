@@ -7,7 +7,7 @@ const EditRecipeForm = ({ recipe, onSave }) => {
   const [description, setDescription] = useState(recipe.description);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    event.preventDefault();
     updateRecipe({ ...recipe, title, description });
     if (onSave) onSave();
   };
