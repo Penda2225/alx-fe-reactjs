@@ -1,19 +1,20 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import BlogPost from './pages/BlogPost';
 import Profile from './pages/Profile';
-import Post from './pages/Post';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const isAuthenticated = true; // toggle to simulate login/logout
+  const isAuthenticated = true; // toggle to false to simulate unauthenticated
 
   return (
     <Router>
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/posts/:id" element={<Post />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
 
-        {/* Protected Route */}
+        {/* Protected Nested Route */}
         <Route
           path="/profile/*"
           element={
